@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaizen - Official Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#E3F2FD; 
+--main:#4FC3F7;
+--dark:#0277BD;
+--white:#FFFFFF;
+--glow:rgba(79,195,247,0.4);
+--accent:#FFF176;
+--status-red:#FF8FB1;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Mitr',sans-serif;}
+
+body{
+background:var(--bg);
+display:flex;
+justify-content:center;
+position: relative;
+overflow-x: hidden;
+min-height: 100vh;
+}
+
+/* --- พื้นหลังอิโมจิฟุ้งๆ --- */
+.bg-emojis {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  font-size: 24px;
+}
+
+.floating-emoji {
+  position: absolute;
+  animation: floatBG 15s infinite linear;
+  opacity: 0.4;
+}
+
+@keyframes floatBG {
+  0% { transform: translateY(110vh) rotate(0deg); }
+  100% { transform: translateY(-10vh) rotate(360deg); }
+}
+
+.container{
+max-width:500px;
+width:100%;
+padding:20px 15px 40px;
+z-index: 1;
+}
+
+.section{
+background:var(--white);
+border-radius:20px;
+padding:25px 20px;
+margin-bottom:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+border:2px solid var(--main);
+}
+
+h1,h2,h3{color:var(--dark);}
+.center{text-align:center;}
+
+/* --- โลโก้และอิโมจิรอบโลโก้ --- */
+.logo-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+width:150px;height:150px;
+border-radius:50%;
+overflow:hidden;
+box-shadow:0 6px 20px var(--glow);
+border: 4px solid var(--white);
+position: relative;
+z-index: 2;
+}
+
+.logo img{width:100%;height:100%;object-fit:cover;}
+
+.logo-deco {
+  position: absolute;
+  font-size: 28px;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+.badges{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+margin-bottom:20px;
+}
+
+.badge{
+background:#fff;
+padding:8px 16px;
+border-radius:25px;
+box-shadow:0 4px 10px var(--glow);
+font-size:13px;
+color:var(--dark);
+border: 1px solid var(--main);
+}
+
+.btn{
+display:block;
+text-align:center;
+padding:14px;
+border-radius:25px;
+text-decoration:none;
+margin-top:15px;
+font-weight:500;
+transition: 0.3s;
+display: flex;
+align-items: center;
+justify-content:center;
+gap: 8px;
+}
+
+.btn-outline{
+background:#fff;
+border:2px dashed var(--main);
+color:var(--dark);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--status-red);
+  border-radius: 50%;
+  display: inline-block;
+  animation: dotBlink 1.2s infinite ease-in-out;
+  box-shadow: 0 0 8px var(--status-red);
+}
+
+@keyframes dotBlink {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.btn-main{
+background:var(--main);
+color:#fff;
+}
+
+.step{
+display:flex;
+align-items:flex-start;
+gap:12px;
+margin-bottom:12px;
+}
+
+.step-num{
+background:var(--main);
+color:#fff;
+width:26px;height:26px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:13px;
+flex-shrink:0;
+margin-top:2px;
+}
+
+.price-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+background:#f7fdff;
+padding:10px 15px;
+border-radius:15px;
+border-left: 4px solid var(--main);
+}
+
+.price-tag{
+background:var(--main);
+color:#fff;
+padding:3px 12px;
+border-radius:20px;
+font-size:14px;
+white-space: nowrap;
+}
+
+.footer{
+text-align:center;
+margin-top:30px;
+}
+
+.socials{
+display:flex;
+gap:8px;
+justify-content:center;
+margin-top:15px;
+}
+
+.socials a{
+flex:1;
+max-width:100px;
+text-align:center;
+padding:8px;
+border-radius:25px;
+background:#fff;
+text-decoration:none;
+color:var(--dark);
+font-size:13px;
+border:1px solid #e1f5fe;
+}
+
+.small{font-size:12px;opacity:.7;margin-top:10px;}
+
+.rule-box {
+background: #fff9c4;
+padding: 15px;
+border-radius: 15px;
+font-size: 14px;
+margin-top: 15px;
+border: 1px dashed #fbc02d;
+}
+</style>
+</head>
+
+<body>
+  <div class="bg-emojis">
+    <span class="floating-emoji" style="left: 10%; animation-delay: 0s;">💜</span>
+    <span class="floating-emoji" style="left: 25%; animation-delay: 2s;">🎱</span>
+    <span class="floating-emoji" style="left: 45%; animation-delay: 4s;">🧿</span>
+    <span class="floating-emoji" style="left: 70%; animation-delay: 6s;">🪼</span>
+    <span class="floating-emoji" style="left: 85%; animation-delay: 8s;">🍇</span>
+  </div>
+
+<div class="container">
+
+<div class="section center" style="border:none;box-shadow:none;background:transparent;">
+
+<div class="logo-wrapper">
+  <span class="logo-deco" style="top: 0; left: 10%;">🪼</span>
+  <span class="logo-deco" style="bottom: 10%; right: 5%;">🎱</span>
+  <span class="logo-deco" style="top: 20%; right: 0%;">🧿</span>
+  <div class="logo">
+    <img src="https://i.postimg.cc/dQNBh4pT/219-20260504204921.png" alt="wish uwu logo">
+  </div>
+</div>
+
+<h1>Kaizen Shop</h1>
+<p style="color:var(--dark);opacity:.8;margin:10px 0 20px;">
+รับทำเซิร์ฟเวอร์ดิสคอร์ด เริ่มต้น 89.- ☁️💜
+</p>
+
+<div class="badges">
+<div class="badge">🧿 ทำเซิร์ฟเวอร์</div>
+<div class="badge">🍇 ทำระบบ</div>
+<div class="badge">🎱 ดิสสำเร็จ</div>
+</div>
+
+<a href="https://discord.gg/Q589MD6d33" class="btn btn-outline">
+<span class="status-dot"></span> เปิดรับคิวนะคะ🕸️🕷️
+</a>
+</div>
+
+<div class="section">
+<h2>🪬 ขั้นตอนการสั่งซื้อ</h2>
+<div class="step"><div class="step-num">1</div><div>บรีฟรายละเอียดที่ทางร้านส่งให้</div></div>
+<div class="step"><div class="step-num">2</div><div>รอแอดมินมารวมราคาและส่งเลขบัญชีให้</div></div>
+<div class="step"><div class="step-num">3</div><div>โอนเงินเพื่อล็อคคิว (โอน = จองคิวเท่านั้น)</div></div>
+<div class="step"><div class="step-num">4</div><div>ไม่รับจอง ไม่รับผ่อน ไม่รับโอนครึ่งนะคะ</div></div>
+<div class="step"><div class="step-num">4</div><div>รอรับงานตามวันที่แอดมินแจ้งได้เลยค่ะ</div></div>
+
+<a href="https://drive.google.com/drive/folders/187AelMeeOfsdvWFpSHq8QxwIPsw7Kmzd?usp=drive_link" class="btn btn-outline">ดูตัวอย่างผลงาน 💀</a>
+<a href="https://drive.google.com/drive/folders/1HzXiIPxl8EHGTrrFnMd8mN-On6CVcqT8?usp=drive_link" class="btn btn-outline">💎 ตัวอย่างและราคาดิสสำเร็จ</a>
+</div>
+
+<div class="section">
+<h2>💜 เมนูราคางาน</h2>
+<div class="price-row"><span>ดิสส่วนตัว</span><span class="price-tag">89-109.-</span></div>
+<div class="price-row"><span>ดิสแก๊งแคลนกิลด์ต่างๆ</span><span class="price-tag">129.-</span></div>
+<div class="price-row"><span>ดิสร้านค้า</span><span class="price-tag">159.-</span></div>
+<div class="price-row"><span>ดิสสตรีมเมอร์</span><span class="price-tag">199.-</span></div>
+<div class="price-row"><span>ดิสคอมมูนิตี้</span><span class="price-tag">299.-</span></div>
+<div class="price-row"><span>ดิสประเทศ</span><span class="price-tag">399.-</span></div>
+<div class="price-row"><span>ดิสโรลเพลย์ ห้องระบบเยอะ</span><span class="price-tag">699.-</span></div> 
+<div class="price-row"><span>คิวเร่งสำหรับตอนติดคิวเยอะ</span><span class="price-tag">+130.-</span></div> 
+  
+<div class="rule-box">
+<strong>🧿 กฎของร้าน:</strong><br>
+• คิวปกติได้งานวันที่<br>
+• หากติดคิวเยอะ รอ 1-3 วัน<br>
+• ดิสห้อง/ระบบเยอะ รอ 3-5 วัน<br>
+• เริมงานแล้วไม่คืนเงินทุกกรณี<br>
+• ยังไม่เริ่มงาน คืน 50% เท่านั้น<br>
+• ร้านทำผิดแก้ฟรี หากลูกค้าบรีฟผิด +20 ต่อ 1 จุด<br>
+</div>
+</div>
+
+<div class="footer">
+<a href="https://discord.gg/Q589MD6d33" class="btn btn-main">สั่งงาน / สอบถามทาง Discord ✮</a>
+<div class="socials">
+<a href="https://www.facebook.com/kaizen.shop.cheer?">Facebook</a>
+<a href="https://www.instagram.com/kz_.kaizen?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+<a href="https://lin.ee/7ta37LG">Line Official</a>
+<a href="https://drive.google.com/drive/folders/1iTua1B5bVV9VZ6FXwRDDX-NdBIe4l44R">Portfolio</a>
+</div>
+<p class="small">© 2026 kaizen - by.cheer</p>
+</div>
+
+</div>
+</body>
+</html>
